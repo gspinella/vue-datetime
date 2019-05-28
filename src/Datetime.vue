@@ -9,8 +9,7 @@
            :value="inputValue"
            v-bind="$attrs"
            v-on="$listeners"
-           @click="open"
-           @focus="open">
+           @click="open">
     <input v-if="hiddenName" type="hidden" :name="hiddenName" :value="value" @input="setValue">
     <slot name="after"></slot>
     <transition-group name="vdatetime-fade" tag="div">
@@ -251,7 +250,7 @@ export default {
 <style>
 .vdatetime-fade-enter-active,
 .vdatetime-fade-leave-active {
-  transition: opacity .4s;
+  transition: opacity 0.4s;
 }
 
 .vdatetime-fade-enter,
@@ -267,6 +266,6 @@ export default {
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 </style>
